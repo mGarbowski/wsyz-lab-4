@@ -1,0 +1,32 @@
+reset;
+option solver cplex;
+model operacje-1.mod;
+data operacje.dat;
+solve;
+print "#######################################";
+print "b) Przy nominalnych czasach wykonywania";
+display minimalny_czas_trwania, rozpoczecie, czas_nominalny, POPRZEDNIKI;
+print "Ścieżka krytyczna B D E";
+print "#######################################";
+
+reset;
+option solver cplex;
+model operacje-2.mod;
+data operacje.dat;
+solve;
+print "#######################################";
+print "c) Przy minimalnych czasach wykonywania";
+display minimalny_czas_trwania, rozpoczecie, czas_minimalny, POPRZEDNIKI;
+print "Ścieżka krytyczna B D E";
+print "#######################################";
+
+reset;
+option solver cplex;
+model operacje-3.mod;
+data operacje.dat;
+solve;
+print "#####################################################";
+print "d) Przy dostępności 100 jednostek środków finansowych";
+display minimalny_czas_trwania, rozpoczecie, czas_minimalny, czas_faktyczny, czas_nominalny, czas_skrocony, wykorzystane_srodki, POPRZEDNIKI;
+print "Ścieżka krytyczna B D E";
+print "#####################################################";
