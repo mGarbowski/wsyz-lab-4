@@ -3,5 +3,9 @@ option solver cplex;
 model osiedle.mod;
 data osiedle.dat;
 solve;
-display minimalny_czas_trwania, rozpoczecie, czas_minimalny, czas_faktyczny, czas_nominalny;
+display minimalny_czas_trwania, rozpoczecie, zakonczenie, czas_minimalny, czas_faktyczny, czas_nominalny, koszt_skrocenia;
 display liczba_pracownikow, K, koszt_dnia_nadgodzin, POPRZEDNIKI;
+
+print "Wybrana ścieżka krytyczna 1: FUND AS AD CS CD DS ED EO EW OST";
+print "Wybrana ścieżka krytyczna 2: FUND AS AD CS CD DS ED EO EW OST";
+print "Wybrana ścieżka krytyczna 3: FUND BS BD CS CD DS ED EO EW OST";

@@ -19,8 +19,8 @@ set POPRZEDNIKI :=
 	(AW, OST) (BW, OST) (CW, OST) (DW, OST) (EW, OST) (AL, OST) (ZIEL, OST)
 ;
 
-param K := 0;
-param  koszt_dnia_nadgodzin := 150;
+param K := 500000;
+param koszt_dnia_nadgodzin := 150;
 
 param czas_nominalny :=
 	FUND	50
