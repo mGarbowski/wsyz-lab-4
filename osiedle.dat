@@ -1,0 +1,105 @@
+set OPERACJE := 
+	FUND AL ZIEL OST 
+	AS AD AO AW 
+	BS BD BO BW 
+	CS CD CO CW 
+	DS DD DO DW 
+	ES ED EO EW
+;
+
+set POPRZEDNIKI :=
+	(FUND, AS) (AS, AD) (AD, AO) (AO, AW)
+	(FUND, BS) (BS, BD) (BD, BO) (BO, BW)
+	(FUND, CS) (CS, CD) (CD, CO) (CO, CW)
+	(FUND, DS) (DS, DD) (DD, DO) (DO, DW)
+	(FUND, ES) (ES, ED) (ED, EO) (EO, EW)
+	(AD, CS) (BD, CS) (CD, DS) (CD, ES)
+	(AO, AL) (BO, AL) (CO, AL) (DO, AL) (EO, AL)
+	(AO, ZIEL) (BO, ZIEL) (CO, ZIEL) (DO, ZIEL) (EO, ZIEL)
+	(AW, OST) (BW, OST) (CW, OST) (DW, OST) (EW, OST) (AL, OST) (ZIEL, OST)
+;
+
+param K := 0;
+param  koszt_dnia_nadgodzin := 150;
+
+param czas_nominalny :=
+	FUND	50
+	AL		25
+	ZIEL 	20
+	OST 	30
+	AS 	60
+	AD	40
+	AO	20	
+	AW	70
+	BS	50
+	BD	40
+	BO	30
+	BW	50
+	CS	50
+	CD	40
+	CO	30
+	CW	50
+	DS	70
+	DD	50
+	DO	30
+	DW	30
+	ES	70
+	ED	50
+	EO	30
+	EW	30
+;
+
+param czas_minimalny := 
+	FUND	50
+	AL		15
+	ZIEL 	15
+	OST 	30
+	AS 	45
+	AD	30
+	AO	15	
+	AW	55
+	BS	40
+	BD	30
+	BO	20
+	BW	40
+	CS	40
+	CD	30
+	CO	20
+	CW	40
+	DS	55
+	DD	35
+	DO	25
+	DW	25
+	ES	55
+	ED	35
+	EO	25
+	EW	25
+;
+
+param liczba_pracownikow :=
+	FUND	0
+	AL		10
+	ZIEL 	10
+	OST 	30
+	AS 	25
+	AD	15
+	AO	20	
+	AW	15
+	BS	10
+	BD	25
+	BO	30
+	BW	25
+	CS	10
+	CD	25
+	CO	30
+	CW	25
+	DS	20
+	DD	25
+	DO	30
+	DW	20
+	ES	20
+	ED	25
+	EO	30
+	EW	20
+;
+

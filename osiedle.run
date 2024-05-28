@@ -1,0 +1,7 @@
+reset;
+option solver cplex;
+model osiedle.mod;
+data osiedle.dat;
+solve;
+display minimalny_czas_trwania, rozpoczecie, czas_minimalny, czas_faktyczny, czas_nominalny;
+display liczba_pracownikow, K, koszt_dnia_nadgodzin, POPRZEDNIKI;
